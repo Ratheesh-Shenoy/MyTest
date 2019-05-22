@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - npm install time
+      - export BUCKET=sparkpost-test-ratheesh
+      - aws cloudformation package --template-file Data-Eng-CodePipeline.yaml --s3-bucket $BUCKET --output-template-file outputtemplate.yaml
+artifacts:
+  type: zip
+  files:
+    - Data-Eng-CodePipeline.yaml
+    - outputtemplate.yaml
