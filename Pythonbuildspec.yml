@@ -4,5 +4,5 @@ phases:
     commands:
 artifacts:
   files:
-    - spark-emr-jobs/*.*
+    - spark-emr-jobs/**/*
   discard-paths: yes
